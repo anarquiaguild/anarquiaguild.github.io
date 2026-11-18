@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" preserveAspectRatio="xMidYMid slice">
+  <!-- Paisagem original (céu de entardecer + montanhas + pinheiros) no espírito das artes do WoW. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#141c55"/>
+      <stop offset=".28" stop-color="#2c3483"/>
+      <stop offset=".5" stop-color="#5b3f95"/>
+      <stop offset=".68" stop-color="#a5578f"/>
+      <stop offset=".82" stop-color="#e08a86"/>
+      <stop offset="1" stop-color="#f4b77c"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".72" cy=".7" r=".45">
+      <stop offset="0" stop-color="#ffe2a6" stop-opacity=".95"/>
+      <stop offset=".25" stop-color="#ffb989" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ff9a8a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c88bb0" stop-opacity="0"/>
+      <stop offset="1" stop-color="#c88bb0" stop-opacity=".45"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b1a45"/>
+      <stop offset="1" stop-color="#0c0b20"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="softer"><feGaussianBlur stdDeviation="5"/></filter>
+    <g id="pine">
+      <path d="M0 0 L-9 22 H-4 L-14 44 H-6 L-18 70 H18 L6 44 H14 L4 22 H9 Z"/>
+      <rect x="-2" y="70" width="4" height="10"/>
+    </g>
+  </defs>
+
+  <rect width="1600" height="640" fill="url(#sky)"/>
+  <rect width="1600" height="640" fill="url(#sun)"/>
+
+  <!-- estrelas -->
+  <g fill="#fff" opacity=".75">
+    <circle cx="120" cy="60" r="1.4"/><circle cx="260" cy="110" r="1"/><circle cx="410" cy="42" r="1.6"/>
+    <circle cx="560" cy="95" r="1"/><circle cx="700" cy="30" r="1.2"/><circle cx="860" cy="75" r="1"/>
+    <circle cx="990" cy="40" r="1.5"/><circle cx="1130" cy="100" r="1"/><circle cx="1270" cy="55" r="1.3"/>
+    <circle cx="1420" cy="90" r="1"/><circle cx="1530" cy="35" r="1.4"/><circle cx="330" cy="170" r=".9"/>
+    <circle cx="780" cy="150" r=".9"/><circle cx="1210" cy="160" r=".9"/>
+  </g>
+
+  <!-- nuvens -->
+  <g filter="url(#soft)" opacity=".55">
+    <ellipse cx="300" cy="230" rx="260" ry="34" fill="#e3a0c0"/>
+    <ellipse cx="980" cy="200" rx="320" ry="30" fill="#f0b1b8"/>
+    <ellipse cx="1400" cy="260" rx="240" ry="28" fill="#d897c4"/>
+    <ellipse cx="640" cy="300" rx="280" ry="24" fill="#f6c3a6"/>
+  </g>
+
+  <!-- montanhas distantes -->
+  <path d="M0 420 L120 330 L210 380 L330 270 L430 360 L540 300 L640 380 L760 290 L880 370 L990 280 L1110 360 L1220 300 L1340 380 L1460 310 L1600 370 V640 H0 Z" fill="#8a6fb3" opacity=".55"/>
+  <path d="M330 270 L300 300 L345 292 L360 310 Z M760 290 L735 315 L775 308 Z M990 280 L965 306 L1005 300 Z" fill="#f3d9ec" opacity=".5"/>
+  <rect y="330" width="1600" height="160" fill="url(#mist)"/>
+
+  <!-- montanhas médias -->
+  <path d="M0 470 L90 420 L190 455 L300 385 L410 450 L520 410 L650 470 L780 400 L900 455 L1030 395 L1160 460 L1280 410 L1400 455 L1520 420 L1600 445 V640 H0 Z" fill="#4b3f86"/>
+  <path d="M0 470 L90 420 L190 455 L300 385 L410 450 L520 410 L650 470 L780 400 L900 455 L1030 395 L1160 460 L1280 410 L1400 455 L1520 420 L1600 445" fill="none" stroke="#c79ad0" stroke-opacity=".25" stroke-width="2"/>
+
+  <!-- torre ao longe -->
+  <g fill="#3a2f72" opacity=".9">
+    <rect x="1118" y="330" width="14" height="80"/>
+    <path d="M1112 330 L1125 296 L1138 330 Z"/>
+    <rect x="1100" y="370" width="10" height="40"/>
+    <path d="M1097 370 L1105 352 L1113 370 Z"/>
+  </g>
+
+  <!-- colinas próximas -->
+  <path d="M0 520 Q200 470 380 510 T760 500 T1140 515 T1600 490 V640 H0 Z" fill="url(#ground)"/>
+
+  <!-- pinheiros (silhuetas) -->
+  <g fill="#0d0c26">
+    <use href="#pine" transform="translate(60 455) scale(1.3)"/>
+    <use href="#pine" transform="translate(110 470) scale(1)"/>
+    <use href="#pine" transform="translate(165 448) scale(1.5)"/>
+    <use href="#pine" transform="translate(1440 450) scale(1.4)"/>
+    <use href="#pine" transform="translate(1495 468) scale(1.05)"/>
+    <use href="#pine" transform="translate(1550 440) scale(1.6)"/>
+    <use href="#pine" transform="translate(1385 476) scale(.9)"/>
+  </g>
+
+  <!-- brilho de fogueira -->
+  <ellipse cx="800" cy="600" rx="420" ry="70" fill="#ff8a3d" opacity=".12" filter="url(#softer)"/>
+</svg>
